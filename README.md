@@ -1,6 +1,6 @@
 # Introduction
 
-About datasets for information retrieval and recommendation tasks
+About datasets for retrieval and recommendation tasks
 
 ## Sources
 
@@ -20,10 +20,12 @@ About datasets for information retrieval and recommendation tasks
 
 ## Preprocessing
 
+The text preprocessing method is divided into five steps:
+
 1. Convert all text to lowercase;
 2. Remove HTML labels;
 3. Restore HTML escape characters;
-4. Split text with punctuation;
+4. Split text with punctuation (regular expression='[!@#$%^&*()_+\-=\[\]\\{\}|;:"<>?,./~\s]+');
 5. Remove tokens without letters. 
 
 ## Result
@@ -58,5 +60,5 @@ Table 3: USPTO20000
 
 ## Format
 
-- First line: {'text ID of candidates or citations':{'text ID of papers or patents',..},..}
-- Other line: text ID of papers or patents \t title \t abstract
+- First line: {'text ID of candidates or citations':{'text ID of papers or patents',..},..}\n
+- Other line: text ID of papers or patents \t title \t abstract \n
